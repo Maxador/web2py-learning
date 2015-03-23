@@ -11,10 +11,23 @@
   }}
 
   {{include 'web2py_ajax.html'}}
+  <noscript><link href="{{=URL('static', 'css/web2py_bootstrap_nojs.css')}}" rel="stylesheet" type="text/css" /></noscript>
 </head>
 <body>
+<div class="container">
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Blog</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+      </ul>
+    </div>
+  </nav>
   {{block center}}
     {{include}}
   {{end}}
+</div>
 </body>
 </html>

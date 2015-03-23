@@ -30,6 +30,11 @@ routers = {
         default_language = possible_languages['default'][0],
         languages = [lang for lang in possible_languages
                            if lang != 'default']
+    ),
+    BASE: dict(
+        default_application = 'blog',
+        default_controller = 'default',
+        default_function = 'index'
     )
 }
 
