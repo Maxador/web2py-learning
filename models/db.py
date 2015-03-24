@@ -47,6 +47,19 @@ auth = Auth(db)
 service = Service()
 plugins = PluginManager()
 
+##Country table
+db.define_tables('country', Field('name', unique=True))
+
+## Add custom fields to user table
+auth.settings.extra_fields['auth_user'] = [
+    Field('age', type='integer'),
+    Field('sex', length=1),
+    Field('country', db.country), ## Relation to country table
+    Field('birthdate', type='date'),
+    Field('user_special_number', length=14), ## Must have AA99-9999-AAAA signature
+    Field('created_at', type='date')
+]
+
 ## create all tables needed by auth if not custom tables
 auth.define_tables(username=False, signature=False)
 

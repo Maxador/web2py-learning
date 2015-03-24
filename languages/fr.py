@@ -32,6 +32,7 @@
 'Client IP': 'IP client',
 'Community': 'Communauté',
 'Components and Plugins': 'Composants et Plugins',
+'Confirm Password': 'Confirm Password',
 'Controller': 'Contrôleur',
 'Copyright': 'Copyright',
 'Created By': 'Créé par',
