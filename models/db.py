@@ -48,7 +48,7 @@ service = Service()
 plugins = PluginManager()
 
 ##Country table
-db.define_tables('country', Field('name', unique=True))
+db.define_table('country', Field('name', unique=True))
 
 ## Add custom fields to user table
 auth.settings.extra_fields['auth_user'] = [
